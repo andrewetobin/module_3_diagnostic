@@ -1,6 +1,6 @@
 <h1>All Stations</h1>
 
-<% @stations.each do |station| %>
+<% @stations_facade.stations.each do |station| %>
   <h3> <%= station.name %>  </h3>
   <p> <%= station.address %></p>
   <p> <%= station.fuel_types %></p>
