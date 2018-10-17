@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
 
   def index
-    # @stations = Station.all 
+    @stations_facade = StationsFacade.new
   end
 
 end
