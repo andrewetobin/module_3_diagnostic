@@ -7,14 +7,14 @@ feature "User can visit root page" do
       expect(page).to have_content("AltFuelFinder")
       expect(page).to have_selector("input[value='Search by zip...']")
     end
-  end 
+  end
   scenario "views 10 stations and stations info" do
 
     # As a user
     # When I visit "/"
     visit "/"
     # And I fill in the search form with 80203 (Note: Use the existing search form)
-    fill_in "Search by zip...50000", with: 80126
+    fill_in "q", with: 80126
 
     # And I click "Locate"
     click_on "Locate"
