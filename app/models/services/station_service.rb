@@ -1,11 +1,11 @@
 class StationService
 
-  def initialize(zip)
-   @zip = zip
+  def initialize
+   @zip = params[:q]
   end
 
   def stations_search
-    get_json("/api/alt-fuel-stations/v1.json?limit=10&fuel_type=ELEC,LPG&api_key=#{key}&format=JSON&zip=80126&radius=6")
+    get_json("/api/alt-fuel-stations/v1.json?limit=10&fuel_type=ELEC,LPG&api_key=#{key}&format=JSON&zip=#{zip}&radius=6")
   end
 
 

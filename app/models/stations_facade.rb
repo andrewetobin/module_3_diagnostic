@@ -9,7 +9,7 @@ class StationsFacade
   private
 
     def service
-      StationService.new 
+      StationService.new(params[:q])
     end
 
 
